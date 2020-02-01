@@ -39,7 +39,7 @@ public class PickUpMechanic : MonoBehaviour
     private void checkAvailableItem()
     {
         Vector3 origin = transform.position;
-        origin.y = 0;
+        origin.y -= 1;
         RaycastHit hit;
         if (Physics.SphereCast(origin, 0.1f, transform.forward, out hit, 1, _pickupLayer))
         {
@@ -48,8 +48,9 @@ public class PickUpMechanic : MonoBehaviour
             OnPickupFoundEvent?.Invoke(true);
             return;
         }
-
-        _availableToPickup.GetComponent<MaterialSwapper>().SwapMaterial(false);
+        
+        if(_availableToPickup)
+            _availableToPickup.GetComponent<MaterialSwapper>().SwapMaterial(false);
         _availableToPickup = null;
         OnPickupFoundEvent?.Invoke(false);
     }
