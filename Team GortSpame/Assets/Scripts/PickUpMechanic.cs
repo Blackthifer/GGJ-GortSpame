@@ -32,7 +32,7 @@ public class PickUpMechanic : MonoBehaviour
         }
     }
 
-    void checkAvailableItem()
+    private void checkAvailableItem()
     {
         Vector3 origin = transform.position;
         origin.y = 0;
@@ -46,7 +46,7 @@ public class PickUpMechanic : MonoBehaviour
         _availableToPickup = null;
     }
 
-    void pickUp()
+    private void pickUp()
     {
         _availableToPickup.position = transform.position + new Vector3(0, 0.2f, 0) + transform.forward;
         _availableToPickup.SetParent(transform, true);
