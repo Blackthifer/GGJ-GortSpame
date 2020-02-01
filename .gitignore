@@ -64,3 +64,12 @@ Team GortSpame/.idea/.idea.Team GortSpame/.idea/indexLayout.xml
 *.log
 Team GortSpame/Library/SceneVisibilityState.asset
 Team GortSpame/Library/ShaderCache/EditorEncounteredVariants
+Team GortSpame/Library/expandedItems
+*.txt
+*.asset
+*.dll
+*.dll
+*.log
+*.db
+Team GortSpame/Library/ScriptMapper
+*.json
