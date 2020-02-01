@@ -6,42 +6,63 @@ public class PickUpMechanic : MonoBehaviour
 {
     private bool _isHolding = false;
     private GameObject _heldItem;
-    private GameObject _pickUpable;
+    private Transform _availableToPickup;
     [SerializeField]
-    private LayerMask PickupLayer;
+    private LayerMask _pickupLayer;
     // Start is called before the first frame update
     void Start()
     {
-        
+        _heldItem = null;
+        _availableToPickup = null;
     }
 
     // Update is called once per frame
     void Update()
     {
-        checkHolding();
-    }
-
-    void checkHolding()
-    {
-        if (_isHolding == false)
+        if (_isHolding)
         {
-            Vector3 _origin = transform.position;
-            _origin.y = 0;
-            RaycastHit hit;
-            if (Input.GetKey(KeyCode.E))
-            {
-                if (Physics.SphereCast(_origin, 0.1f, transform.forward, out hit, 1, PickupLayer))
-                {
-                    pickUp(hit.transform);
-                    Debug.Log("I am noticed, senpai!");
-                }
-            }
+            if (Input.GetKeyDown(KeyCode.E))
+                dropHeld();
+        }
+        else
+        {
+            checkAvailableItem();
+            if (Input.GetKeyDown(KeyCode.E) && _availableToPickup)
+                pickUp();
         }
     }
 
-    void pickUp(Transform itemToPick)
+    private void checkAvailableItem()
     {
-        itemToPick.Translate(0, 1, 0);
-        Debug.Log("I have moved, senpai!");
+        Vector3 origin = transform.position;
+        origin.y = 0;
+        RaycastHit hit;
+        if (Physics.SphereCast(origin, 0.1f, transform.forward, out hit, 1, _pickupLayer))
+        {
+            _availableToPickup = hit.transform;
+            return;
+        }
+
+        _availableToPickup = null;
+    }
+
+    private void pickUp()
+    {
+        _availableToPickup.position = transform.position + new Vector3(0, 0.2f, 0) + transform.forward;
+        _availableToPickup.SetParent(transform, true);
+        _heldItem = _availableToPickup.gameObject;
+        _isHolding = true;
+        _availableToPickup = null;
+    }
+
+    private void dropHeld()
+    {
+        Transform heldTrans = _heldItem.transform;
+        heldTrans.SetParent(null, true);
+        Vector3 heldPos = heldTrans.position;
+        heldPos.y = 0;
+        heldTrans.position = heldPos;
+        _isHolding = false;
+        _heldItem = null;
     }
 }

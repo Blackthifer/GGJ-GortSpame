@@ -45,7 +45,9 @@ public class PlayerMovement : MonoBehaviour
             _sprinting = true;
         }
         
-        transform.Translate(_speed * (_sprinting ? _sprintMultiplier : 1) * moveVector);
+        Vector3 myPos = transform.position;
+        myPos += _speed * (_sprinting ? _sprintMultiplier : 1) * moveVector;
+        transform.position = myPos;
 
         _sprinting = false;
     }

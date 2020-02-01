@@ -44,7 +44,7 @@ public class PuzzleChecks : MonoBehaviour
         metalPuzzleCheck();
         firePuzzleCheck();
 
-        audioMessageCheck();
+        //audioMessageCheck();
         gameFinishedCheck();
     }
 
