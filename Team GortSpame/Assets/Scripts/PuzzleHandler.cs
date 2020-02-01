@@ -11,6 +11,9 @@ public class PuzzleHandler : MonoBehaviour
     private int _arraySize;
     private bool _finished;
 
+    [SerializeField] private GameObject[] toBeReplaced;
+    [SerializeField] private GameObject[] newObjects;
+
     [SerializeField] private KeyCode debugActivator;
 
     // Start is called before the first frame update
@@ -23,10 +26,11 @@ public class PuzzleHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(debugActivator))
+        if (Input.GetKeyDown(debugActivator) && !_finished)
         {
             _finished = true;
             bgmManager.ActivateTrack(trackActivateNr);
+            replaceObjects();
         }
         
         if (!_finished)
@@ -40,11 +44,25 @@ public class PuzzleHandler : MonoBehaviour
             }
             _finished = true;
             bgmManager.ActivateTrack(trackActivateNr);
+            replaceObjects();
         }
     }
 
     private bool checkInPlace(int index)
     {
         return (puzzlePieces[index].position - piecePlacements[index].position).sqrMagnitude < 0.3f * 0.3f;
+    }
+
+    private void replaceObjects()
+    {
+        for (int i = 0; i < toBeReplaced.Length; i++)
+        {
+            toBeReplaced[i].SetActive(false);
+        }
+
+        for (int i = 0; i < newObjects.Length; i++)
+        {
+            newObjects[i].SetActive(true);
+        }
     }
 }

@@ -10,10 +10,13 @@
           <e p="BGMManager.cs" t="Include" />
           <e p="CameraControl.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
+          <e p="MaterialSwapper.cs" t="Include" />
+          <e p="PauseMenu.cs" t="Include" />
           <e p="PickUpMechanic.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="PuzzleChecks.cs" t="Include" />
           <e p="PuzzleHandler.cs" t="Include" />
+          <e p="ShowPrompt.cs" t="Include" />
           <e p="SoundTrackFadeSwitch.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">
