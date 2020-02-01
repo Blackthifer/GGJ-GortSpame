@@ -1109,8 +1109,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenuUI: {fileID: 108782658}
-  playerPause: {fileID: 160399282}
-  placeholderCamera: {fileID: 1476001225}
 --- !u!1 &1476001225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,7 +1121,7 @@ GameObject:
   - component: {fileID: 1476001227}
   - component: {fileID: 1476001226}
   m_Layer: 0
-  m_Name: BackUpCamera
+  m_Name: PlaceholderCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1750,8 +1748,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenuUI: {fileID: 0}
-  playerPause: {fileID: 0}
-  placeholderCamera: {fileID: 0}
 --- !u!1 &1989108326
 GameObject:
   m_ObjectHideFlags: 0
