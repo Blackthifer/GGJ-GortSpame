@@ -2,16 +2,16 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-/Team GortSpame/[Ll]ibrary/
-/Team GortSpame/[Tt]emp/
-/Team GortSpame/[Oo]bj/
-/Team GortSpame/[Bb]uild/
-/Team GortSpame/[Bb]uilds/
-/Team GortSpame/[Ll]ogs/
-/Team GortSpame/[Mm]emoryCaptures/
+Team GortSpame/[Ll]ibrary/
+Team GortSpame/[Tt]emp/
+Team GortSpame/[Oo]bj/
+Team GortSpame/[Bb]uild/
+Team GortSpame/[Bb]uilds/
+Team GortSpame/[Ll]ogs/
+Team GortSpame/[Mm]emoryCaptures/
 
 # Never ignore Asset meta data
-!/Team GortSpame/[Aa]ssets/**/*.meta
+!Team GortSpame/[Aa]ssets/**/*.meta
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*
@@ -57,4 +57,3 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
-
