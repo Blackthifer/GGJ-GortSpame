@@ -49,7 +49,7 @@ public class PickUpMechanic : MonoBehaviour
             return;
         }
 
-        _availableToPickup.GetComponent<MaterialSwapper>().SwapMaterial(false);
+        _availableToPickup?.GetComponent<MaterialSwapper>().SwapMaterial(false);
         _availableToPickup = null;
         OnPickupFoundEvent?.Invoke(false);
     }

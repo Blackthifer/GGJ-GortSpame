@@ -73,3 +73,5 @@ Team GortSpame/Library/expandedItems
 *.db
 Team GortSpame/Library/ScriptMapper
 *.json
+*.xml
+*.xml
