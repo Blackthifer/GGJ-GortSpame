@@ -29,12 +29,12 @@ public class SoundTrackFadeSwitch : MonoBehaviour
         float vol = _audioSource.volume;
         if (_fadeIn && vol < 1)
         {
-            vol += 0.0001f * _fadeCount++;
+            vol += 0.0001f * Mathf.Sqrt(_fadeCount++);
             vol = Mathf.Min(vol, 1);
         }
         if (!_fadeIn && vol > 0)
         {
-            vol -= 0.0001f * _fadeCount--;
+            vol -= 0.0001f * Mathf.Sqrt(_fadeCount--);
             vol = Mathf.Max(0, vol);
         }
         _audioSource.volume = vol;
