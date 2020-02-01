@@ -70,7 +70,6 @@ Team GortSpame/Library/expandedItems
 *.dll
 *.dll
 *.log
-*.db
 Team GortSpame/Library/ScriptMapper
 *.json
 *.xml
@@ -79,7 +78,6 @@ Team GortSpame/Library/ScriptMapper
 *.json
 *.log
 Team GortSpame/Library/ShaderCache/EditorEncounteredVariants
-Team GortSpame/Library/ShaderCache.db
 Team GortSpame/Library/expandedItems
 Team GortSpame/Library/LastSceneManagerSetup.txt
 Team GortSpame/Library/StateCache/Hierarchy/11868e-mainStage.json
