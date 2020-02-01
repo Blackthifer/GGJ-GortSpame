@@ -1782,10 +1782,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d54c7488028b9c742a268d304cdca81c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzlePieces: []
-  piecePlacements: []
+  puzzlePieces:
+  - {fileID: 462645484}
+  - {fileID: 1408800369}
+  - {fileID: 1352166197}
+  - {fileID: 650034153}
+  piecePlacements:
+  - {fileID: 1652539342}
+  - {fileID: 1036727754}
+  - {fileID: 902091033}
+  - {fileID: 1184338239}
   bgmManager: {fileID: 1132845954}
-  trackActivateNr: 0
+  trackActivateNr: 2
   toBeReplaced: []
   newObjects: []
   debugActivator: 0
@@ -1816,6 +1824,7 @@ GameObject:
   - component: {fileID: 1408800367}
   - component: {fileID: 1408800366}
   - component: {fileID: 1408800365}
+  - component: {fileID: 1408800370}
   m_Layer: 8
   m_Name: stone2
   m_TagString: PickUp
@@ -1925,18 +1934,6 @@ MonoBehaviour:
   _pickupLayer:
     serializedVersion: 2
     m_Bits: 256
---- !u!114 &1508139504 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8330615893860028694, guid: 82c3ca18eb0afc24c81780ec64f8766c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1210423209}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aaef7e1fe1c56949b8477b483d5a331, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1545248195
 GameObject:
   m_ObjectHideFlags: 0
