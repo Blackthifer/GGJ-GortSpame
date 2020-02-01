@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/prefabScene.unity
+- path: Assets/Scenes/PuzzleCheckingBackup.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
