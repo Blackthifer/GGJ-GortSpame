@@ -1065,6 +1065,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1132845954 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8330615893860028694, guid: 82c3ca18eb0afc24c81780ec64f8766c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1210423209}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aaef7e1fe1c56949b8477b483d5a331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1184338238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,7 +1298,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1404433189}
   - component: {fileID: 1404433188}
-  - component: {fileID: 1404433187}
   m_Layer: 0
   m_Name: stonePuzzle
   m_TagString: Untagged
@@ -1294,25 +1305,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1404433187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1404433186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d54c7488028b9c742a268d304cdca81c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzlePieces: []
-  piecePlacements: []
-  bgmManager: {fileID: 0}
-  trackActivateNr: 0
-  toBeReplaced: []
-  newObjects: []
-  debugActivator: 0
 --- !u!114 &1404433188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1327,7 +1319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzlePieces: []
   piecePlacements: []
-  bgmManager: {fileID: 0}
+  bgmManager: {fileID: 1132845954}
   trackActivateNr: 0
   toBeReplaced: []
   newObjects: []
@@ -1359,7 +1351,6 @@ GameObject:
   - component: {fileID: 1408800367}
   - component: {fileID: 1408800366}
   - component: {fileID: 1408800365}
-  - component: {fileID: 1408800370}
   m_Layer: 8
   m_Name: stone2
   m_TagString: PickUp
@@ -1454,21 +1445,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1408800370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1408800364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1393042baadbdd74289b279d79197ec0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pickupLayer:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!1 &1610834335
 GameObject:
   m_ObjectHideFlags: 0
