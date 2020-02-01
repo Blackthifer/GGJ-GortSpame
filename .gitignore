@@ -75,3 +75,8 @@ Team GortSpame/Library/ScriptMapper
 *.json
 *.xml
 *.xml
+*.json
+*.json
+*.log
+Team GortSpame/Library/ShaderCache/EditorEncounteredVariants
+Team GortSpame/Library/ShaderCache.db

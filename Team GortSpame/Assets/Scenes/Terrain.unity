@@ -1437,6 +1437,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1132845954 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8330615893860028694, guid: 82c3ca18eb0afc24c81780ec64f8766c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1210423209}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aaef7e1fe1c56949b8477b483d5a331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1184338238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1772,7 +1784,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzlePieces: []
   piecePlacements: []
-  bgmManager: {fileID: 1508139504}
+  bgmManager: {fileID: 1132845954}
   trackActivateNr: 0
   toBeReplaced: []
   newObjects: []
@@ -1804,7 +1816,6 @@ GameObject:
   - component: {fileID: 1408800367}
   - component: {fileID: 1408800366}
   - component: {fileID: 1408800365}
-  - component: {fileID: 1408800370}
   m_Layer: 8
   m_Name: stone2
   m_TagString: PickUp
