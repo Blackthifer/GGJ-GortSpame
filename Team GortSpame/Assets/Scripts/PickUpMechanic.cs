@@ -9,6 +9,10 @@ public class PickUpMechanic : MonoBehaviour
     private Transform _availableToPickup;
     [SerializeField]
     private LayerMask _pickupLayer;
+
+    public delegate void FoundPickup(bool found);
+    public static event FoundPickup OnPickupFoundEvent;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -40,18 +44,23 @@ public class PickUpMechanic : MonoBehaviour
         if (Physics.SphereCast(origin, 0.1f, transform.forward, out hit, 1, _pickupLayer))
         {
             _availableToPickup = hit.transform;
+            _availableToPickup.GetComponent<MaterialSwapper>().SwapMaterial(true);
+            OnPickupFoundEvent?.Invoke(true);
             return;
         }
 
+        _availableToPickup.GetComponent<MaterialSwapper>().SwapMaterial(false);
         _availableToPickup = null;
+        OnPickupFoundEvent?.Invoke(false);
     }
 
     private void pickUp()
     {
-        _availableToPickup.position = transform.position + new Vector3(0, 0.2f, 0) + transform.forward;
+        _availableToPickup.position = transform.position + transform.forward;
         _availableToPickup.SetParent(transform, true);
         _heldItem = _availableToPickup.gameObject;
         _isHolding = true;
+        _availableToPickup.GetComponent<MaterialSwapper>().SwapMaterial(false);
         _availableToPickup = null;
     }
 
@@ -60,9 +69,12 @@ public class PickUpMechanic : MonoBehaviour
         Transform heldTrans = _heldItem.transform;
         heldTrans.SetParent(null, true);
         Vector3 heldPos = heldTrans.position;
-        heldPos.y = 0;
+        RaycastHit hit;
+        Physics.Raycast(heldTrans.position, new Vector3(0, -1, 0), out hit, 100);
+        heldPos.y = hit.point.y;
         heldTrans.position = heldPos;
         _isHolding = false;
         _heldItem = null;
+        OnPickupFoundEvent?.Invoke(false);
     }
 }

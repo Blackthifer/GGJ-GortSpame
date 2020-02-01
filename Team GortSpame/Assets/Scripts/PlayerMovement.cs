@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    private float _speed = 0.04f;
+    [SerializeField] private float _speed = 0.04f;
     private float _sprintMultiplier = 1.5f;
     private bool _sprinting = false;
 
@@ -17,7 +17,14 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        handleMovement();
+        if (PauseMenu.GameIsPaused == true)
+        {
+            return;
+        }
+        else
+        {
+            handleMovement();
+        }
     }
 
     private void handleMovement()

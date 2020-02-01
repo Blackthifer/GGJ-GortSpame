@@ -5,30 +5,32 @@ using UnityEngine;
 public class CameraControl : MonoBehaviour
 {
     // Start is called before the first frame update
-    private Vector3 _virtualRotation;
+    [Range(0.1f, 5)] public float RotationSpeed = 1;
     
     void Start()
     {
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
-        _virtualRotation = transform.eulerAngles;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (PauseMenu.GameIsPaused == true)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            return;
+        }
+
+        Cursor.lockState = CursorLockMode.Locked;
         handleRotation();
     }
     
     private void handleRotation()
     {
+        Vector2 mouseInput = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
         Transform myTrans = transform;
-        Vector3 newMousePos = Input.mousePosition;
-        float yRot = (newMousePos.x / (float) Screen.width) * 360f - 180f;
-        myTrans.parent.Rotate(new Vector3(0, yRot - _virtualRotation.y, 0));
-        _virtualRotation.y = yRot;
-        _virtualRotation.x = (newMousePos.y / (float) Screen.height) * -180f + 90f;
-        float xRot = Mathf.Clamp(_virtualRotation.x, -85, 85);
-        myTrans.eulerAngles = new Vector3(xRot, _virtualRotation.y, _virtualRotation.z);
+        myTrans.parent.Rotate(new Vector3(0, mouseInput.x * RotationSpeed, 0));
+        myTrans.Rotate(new Vector3(-mouseInput.y * RotationSpeed, 0, 0));
     }
 }

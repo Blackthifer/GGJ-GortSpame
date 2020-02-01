@@ -5,7 +5,6 @@ using UnityEngine;
 public class SoundTrackFadeSwitch : MonoBehaviour
 {
     private AudioSource _audioSource;
-    private AudioClip _audioClip;
     [SerializeField] private KeyCode _triggerCode;
     private bool _fadeIn = false;
     private int _fadeCount = 1;
@@ -14,7 +13,6 @@ public class SoundTrackFadeSwitch : MonoBehaviour
     void Start()
     {
         _audioSource = GetComponent<AudioSource>();
-        _audioClip = _audioSource.clip;
         _audioSource.volume = 0;
     }
 
@@ -29,14 +27,19 @@ public class SoundTrackFadeSwitch : MonoBehaviour
         float vol = _audioSource.volume;
         if (_fadeIn && vol < 1)
         {
-            vol += 0.0001f * _fadeCount++;
+            vol += 0.0001f * Mathf.Sqrt(_fadeCount++);
             vol = Mathf.Min(vol, 1);
         }
         if (!_fadeIn && vol > 0)
         {
-            vol -= 0.0001f * _fadeCount--;
+            vol -= 0.0001f * Mathf.Sqrt(_fadeCount--);
             vol = Mathf.Max(0, vol);
         }
         _audioSource.volume = vol;
+    }
+
+    public void Activate()
+    {
+        _fadeIn = true;
     }
 }
