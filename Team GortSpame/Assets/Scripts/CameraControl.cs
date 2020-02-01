@@ -24,10 +24,10 @@ public class CameraControl : MonoBehaviour
     {
         Transform myTrans = transform;
         Vector3 newMousePos = Input.mousePosition;
-        float yRot = (newMousePos.x / (float) Screen.width) * 360f;
+        float yRot = (newMousePos.x / (float) Screen.width) * 360f - 180f;
         myTrans.parent.Rotate(new Vector3(0, yRot - _virtualRotation.y, 0));
         _virtualRotation.y = yRot;
-        _virtualRotation.x = (newMousePos.y / (float) Screen.height) * 180f - 90f;
+        _virtualRotation.x = (newMousePos.y / (float) Screen.height) * -180f + 90f;
         float xRot = Mathf.Clamp(_virtualRotation.x, -85, 85);
         myTrans.eulerAngles = new Vector3(xRot, _virtualRotation.y, _virtualRotation.z);
     }
