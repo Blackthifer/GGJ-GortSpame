@@ -9,7 +9,7 @@ public class BGMManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        ActivateTrack(1);
     }
 
     // Update is called once per frame
@@ -20,6 +20,7 @@ public class BGMManager : MonoBehaviour
 
     public void ActivateTrack(int trackNr)
     {
-        audioTracks[trackNr - 1].Activate();
+        if (trackNr > 0 && trackNr < audioTracks.Length + 1)
+            audioTracks[trackNr - 1].Activate();
     }
 }
