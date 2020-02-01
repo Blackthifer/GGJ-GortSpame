@@ -17,7 +17,14 @@ public class CameraControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        handleRotation();
+        if (PauseMenu.GameIsPaused == true)
+        {
+            return;
+        }
+        else
+        {
+            handleRotation();
+        }
     }
     
     private void handleRotation()

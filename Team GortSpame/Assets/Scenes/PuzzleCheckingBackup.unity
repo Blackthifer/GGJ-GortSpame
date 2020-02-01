@@ -222,7 +222,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 127047126}
+  - component: {fileID: 127047125}
   - component: {fileID: 127047124}
   - component: {fileID: 127047123}
   - component: {fileID: 127047122}
@@ -293,7 +293,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 127047121}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &127047126
+--- !u!4 &127047125
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -301,7 +301,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 127047121}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.11, y: 0.1, z: -4.97}
+  m_LocalPosition: {x: 3, y: 0, z: -2}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 741845523}
@@ -501,11 +501,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 741845523}
-  - component: {fileID: 741845524}
-  - component: {fileID: 741845525}
   - component: {fileID: 741845526}
+  - component: {fileID: 741845525}
+  - component: {fileID: 741845524}
   m_Layer: 0
-  m_Name: PuzzleCheck
+  m_Name: PuzzleEarth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -522,7 +522,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 127047126}
+  - {fileID: 127047125}
   - {fileID: 6503274}
   - {fileID: 791398021}
   - {fileID: 495064321}
@@ -546,7 +546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieces:
-  - {fileID: 0}
+  - {fileID: 127047125}
   piecePlacements:
   - {fileID: 6503274}
   bgmManager: {fileID: 0}
@@ -565,7 +565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieces:
-  - {fileID: 0}
+  - {fileID: 127047125}
   piecePlacements:
   - {fileID: 6503274}
   bgmManager: {fileID: 0}
@@ -584,7 +584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePieces:
-  - {fileID: 0}
+  - {fileID: 127047125}
   piecePlacements:
   - {fileID: 6503274}
   bgmManager: {fileID: 0}
