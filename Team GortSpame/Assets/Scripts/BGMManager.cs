@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BGMManager : MonoBehaviour
 {
+    [SerializeField] private SoundTrackFadeSwitch[] audioTracks;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,10 @@ public class BGMManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void ActivateTrack(int trackNr)
+    {
+        audioTracks[trackNr - 1].Activate();
     }
 }
