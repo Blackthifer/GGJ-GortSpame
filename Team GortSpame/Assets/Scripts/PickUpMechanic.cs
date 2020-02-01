@@ -32,7 +32,6 @@ public class PickUpMechanic : MonoBehaviour
             {
                 if (Physics.SphereCast(_origin, 0.1f, transform.forward, out hit, 1, PickupLayer))
                 {
-                    Debug.Log("YES");
                     pickUp(hit.transform);
                     Debug.Log("I am noticed, senpai!");
                 }
