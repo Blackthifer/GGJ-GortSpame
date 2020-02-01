@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PuzzleHandler : MonoBehaviour
 {
+    
+    
     [SerializeField] private Transform[] puzzlePieces;
     [SerializeField] private Transform[] piecePlacements;
     [SerializeField] private BGMManager bgmManager;
@@ -38,31 +40,36 @@ public class PuzzleHandler : MonoBehaviour
             bool getOut = false;
             for (int i = 0; i < _arraySize; i++)
             {
-                if (!checkInPlace(i))
+                int positionMatched = checkInPlace(i);
+                if (positionMatched < 0)
                 {
                     getOut = true;
                     continue;
                 }
 
-                puzzlePieces[i].position = piecePlacements[i].position;
+                puzzlePieces[i].position = piecePlacements[positionMatched].position;
                 puzzlePieces[i].gameObject.layer = 0;
             }
+
+            if (getOut)
+                return;
             _finished = true;
             bgmManager.ActivateTrack(trackActivateNr);
             replaceObjects();
         }
     }
 
-    private bool checkInPlace(int index)
+    private int checkInPlace(int index)
     {
         for (int j = 0; j < _arraySize; j++)
         {
             if ((puzzlePieces[index].position - piecePlacements[j].position).sqrMagnitude < 0.3f * 0.3f)
             {
-                return true;
+                Debug.Log("Matched!");
+                return j;
             }
         }
-        return false;
+        return -1;
     }
 
     private void replaceObjects()
