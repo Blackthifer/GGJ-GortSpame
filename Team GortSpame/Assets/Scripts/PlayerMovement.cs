@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -142,25 +142,21 @@ public class PlayerMovement : MonoBehaviour
         {
             _differenceX = _oldMousePos.x - Input.mousePosition.x;
             transform.Rotate(new Vector3(-(_differenceX), 0, 0));
-            Debug.Log("DifferenceX = " + _differenceX);
         }*/
         if (Input.mousePosition.x < _oldMousePos.x)
         {
             _differenceY = Input.mousePosition.x -_oldMousePos.x;
             transform.Rotate(new Vector3(0, _differenceY, 0));
-            Debug.Log("DifferenceY = " + _differenceY);
         }
         /*if (Input.mousePosition.x > _oldMousePos.x)
         {
             _differenceX = _oldMousePos.x - Input.mousePosition.x;
             transform.Rotate(new Vector3(_differenceX, 0, 0));
-            Debug.Log("DifferenceX = " + _differenceX);
         }*/
         if (Input.mousePosition.x > _oldMousePos.x)
         {
             _differenceY = Input.mousePosition.x - _oldMousePos.x;
             transform.Rotate(new Vector3(0, _differenceY, 0));
-            Debug.Log("DifferenceY = " + _differenceY);
         }
         _oldMousePos = Input.mousePosition;
     }
