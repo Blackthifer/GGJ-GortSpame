@@ -35,10 +35,15 @@ public class PuzzleHandler : MonoBehaviour
         
         if (!_finished)
         {
+            bool getOut = false;
             for (int i = 0; i < _arraySize; i++)
             {
                 if (!checkInPlace(i))
-                    return;
+                {
+                    getOut = true;
+                    continue;
+                }
+
                 puzzlePieces[i].position = piecePlacements[i].position;
                 puzzlePieces[i].gameObject.layer = 0;
             }
@@ -50,7 +55,14 @@ public class PuzzleHandler : MonoBehaviour
 
     private bool checkInPlace(int index)
     {
-        return (puzzlePieces[index].position - piecePlacements[index].position).sqrMagnitude < 0.3f * 0.3f;
+        for (int j = 0; j < _arraySize; j++)
+        {
+            if ((puzzlePieces[index].position - piecePlacements[j].position).sqrMagnitude < 0.3f * 0.3f)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     private void replaceObjects()
