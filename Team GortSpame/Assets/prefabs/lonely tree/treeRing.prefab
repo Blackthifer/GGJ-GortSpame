@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 4940267165518176700}
   - component: {fileID: 1707941388067757381}
   - component: {fileID: 474549748924519372}
-  m_Layer: 0
+  - component: {fileID: 2415600653070564454}
+  m_Layer: 8
   m_Name: treeRing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121121051374610841}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -20.728865, y: 0.588, z: -4.787578}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children: []
@@ -95,3 +96,16 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 69.80997
   m_Center: {x: -0.000030517578, y: -13.472855, z: -0.000030517578}
+--- !u!114 &2415600653070564454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121121051374610841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 610efb56821337d428fb0014f3ba5d11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondMat: {fileID: 2100000, guid: 0defb5ead165b5849a30881127f560f4, type: 2}
