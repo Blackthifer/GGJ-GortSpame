@@ -341,7 +341,7 @@ Light:
   m_Intensity: 1
   m_Range: 1000
   m_SpotAngle: 120
-  m_InnerSpotAngle: 21.80208
+  m_InnerSpotAngle: 3
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
