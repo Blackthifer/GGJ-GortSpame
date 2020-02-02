@@ -19,6 +19,13 @@ public class PuzzleHandler : MonoBehaviour
     [SerializeField] private int trackActivateNr;
     private int _arraySize;
     private bool _finished;
+    public static int puzzlesCompleted = 0;
+
+    public GameObject stage1Tree;
+    public GameObject stage2Tree;
+    public GameObject stage3Tree;
+    public GameObject stage4Tree;
+    public GameObject stage5Tree;
 
     [SerializeField] private ObjectAction[] toRemove;
     [SerializeField] private ObjectAction[] newObjects;
@@ -30,6 +37,7 @@ public class PuzzleHandler : MonoBehaviour
     {
         _arraySize = puzzlePieces.Length;
         _finished = false;
+        Debug.Log("Puzzles completed: " + puzzlesCompleted);
     }
 
     // Update is called once per frame
@@ -41,7 +49,8 @@ public class PuzzleHandler : MonoBehaviour
             bgmManager.ActivateTrack(trackActivateNr);
             replaceObjects();
         }
-        
+        sakuraTree();
+
         if (!_finished)
         {
             bool getOut = false;
@@ -61,6 +70,8 @@ public class PuzzleHandler : MonoBehaviour
             if (getOut)
                 return;
             _finished = true;
+            puzzlesCompleted += 1;
+            Debug.Log("Puzzles completed: " + puzzlesCompleted);
             bgmManager.ActivateTrack(trackActivateNr);
             replaceObjects();
         }
@@ -91,6 +102,34 @@ public class PuzzleHandler : MonoBehaviour
         {
             ObjectAction current = newObjects[i];
             current.Object.SetActive(true);
+        }
+    }
+
+    public void sakuraTree()
+    {
+        if (puzzlesCompleted == 1)
+        {
+            stage1Tree.SetActive(true);
+        }
+        else if (puzzlesCompleted == 2)
+        {
+            stage1Tree.SetActive(false);
+            stage2Tree.SetActive(true);
+        }
+        else if (puzzlesCompleted == 3)
+        {
+            stage2Tree.SetActive(false);
+            stage3Tree.SetActive(true);
+        }
+        else if (puzzlesCompleted == 4)
+        {
+            stage3Tree.SetActive(false);
+            stage4Tree.SetActive(true);
+        }
+        else if (puzzlesCompleted == 5)
+        {
+            stage4Tree.SetActive(false);
+            stage5Tree.SetActive(true);
         }
     }
 }
