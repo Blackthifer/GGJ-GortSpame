@@ -8,6 +8,7 @@ public class PickUpMechanic : MonoBehaviour
     private GameObject _heldItem;
     private Transform _availableToPickup;
     [SerializeField] private LayerMask _pickupLayer;
+    [SerializeField] private LayerMask _placingMask;
 
     public delegate void FoundPickup(bool found);
     public static event FoundPickup OnPickupFoundEvent;
@@ -72,7 +73,7 @@ public class PickUpMechanic : MonoBehaviour
         heldTrans.SetParent(null, true);
         Vector3 heldPos = heldTrans.position;
         RaycastHit hit;
-        Physics.Raycast(heldTrans.position, new Vector3(0, -1, 0), out hit, 100, 0, QueryTriggerInteraction.Ignore);
+        Physics.Raycast(heldTrans.position, new Vector3(0, -1, 0), out hit, 100, _placingMask, QueryTriggerInteraction.Ignore);
         heldPos.y = hit.point.y;
         heldTrans.position = heldPos;
         _heldItem.GetComponent<Collider>().enabled = true;
