@@ -18,10 +18,12 @@ public class CameraControl : MonoBehaviour
     {
         if (PauseMenu.GameIsPaused == true)
         {
+            Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             return;
         }
 
+        Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         handleRotation();
     }

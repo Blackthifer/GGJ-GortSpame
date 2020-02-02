@@ -40,6 +40,7 @@
         <e p="Scripts" t="Include">
           <e p="BGMManager.cs" t="Include" />
           <e p="CameraControl.cs" t="Include" />
+          <e p="EndingTrigger.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
           <e p="MaterialSwapper.cs" t="Include" />
           <e p="PauseMenu.cs" t="Include" />

@@ -75,7 +75,7 @@ public class PuzzleHandler : MonoBehaviour
         {
             if ((puzzlePieces[index].position - piecePlacements[j].position).sqrMagnitude < 0.3f * 0.3f)
             {
-                Debug.Log("Matched!");
+                //Debug.Log("Matched!");
                 return j;
             }
         }
