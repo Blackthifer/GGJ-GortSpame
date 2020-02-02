@@ -34,6 +34,7 @@ public class UITextWriter : MonoBehaviour
 
     public void WriteText(string toWrite)
     {
+        StopAllCoroutines();
         textPanel.SetActive(true);
         StartCoroutine(typeText(toWrite));
         _active = true;
