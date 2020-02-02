@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -57,5 +58,12 @@ public class PlayerMovement : MonoBehaviour
         transform.position = myPos;
 
         _sprinting = false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        TextTrigger newText = other.GetComponent<TextTrigger>();
+        if(newText)
+            newText.ActivateWriter();
     }
 }
