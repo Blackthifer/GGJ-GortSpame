@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2110739322851187475}
   - component: {fileID: 3408156871252034371}
   m_Layer: 0
-  m_Name: bambooTree
+  m_Name: bambooTree 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
