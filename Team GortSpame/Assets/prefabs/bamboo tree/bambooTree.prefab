@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 3687698156045901276}
   - component: {fileID: 5653797986668750826}
   - component: {fileID: 2110739322851187475}
+  - component: {fileID: 3408156871252034371}
   m_Layer: 0
-  m_Name: bambooTree 1
+  m_Name: bambooTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,3 +80,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3408156871252034371
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393515450663464911}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 26.149536, y: 320, z: 38.472412}
+  m_Center: {x: 5.1210327, y: 160, z: -1.0006104}

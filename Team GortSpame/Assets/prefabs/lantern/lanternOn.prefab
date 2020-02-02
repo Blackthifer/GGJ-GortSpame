@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8827366406291700230}
   - component: {fileID: 565795786738401328}
   - component: {fileID: 6117741170765298889}
+  - component: {fileID: -9084809737312219282}
   m_Layer: 0
   m_Name: lanternOn
   m_TagString: Untagged
@@ -82,3 +83,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &-9084809737312219282
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5537812508513749013}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 83.3298, y: 188.75241, z: 86.3241}
+  m_Center: {x: -0.000015258789, y: 94.376205, z: -0.000061035156}

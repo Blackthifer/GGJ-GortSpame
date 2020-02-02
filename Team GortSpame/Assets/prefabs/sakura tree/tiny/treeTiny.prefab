@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7104825504939490607}
   - component: {fileID: 2288514260554385177}
   - component: {fileID: 5548125722436533216}
+  - component: {fileID: 4842770739455665618}
   m_Layer: 0
   m_Name: treeTiny
   m_TagString: Untagged
@@ -80,3 +81,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!136 &4842770739455665618
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6107497919439130428}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 41.368805
+  m_Height: 176.21736
+  m_Direction: 1
+  m_Center: {x: -3.1411743, y: 88.10868, z: -10.259674}

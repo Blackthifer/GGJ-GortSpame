@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 8769976027885442759}
   - component: {fileID: 355274216226073841}
   - component: {fileID: 6328324313821302792}
+  - component: {fileID: -1949544125477169441}
   m_Layer: 0
-  m_Name: sakuraBase
+  m_Name: sakuraBaseOff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,3 +85,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &-1949544125477169441
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5759663446750356692}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 95.51649
+  m_Center: {x: 2.594635, y: 12.052063, z: 0.8943405}
