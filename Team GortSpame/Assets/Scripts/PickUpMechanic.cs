@@ -40,8 +40,9 @@ public class PickUpMechanic : MonoBehaviour
     {
         Vector3 origin = transform.position;
         origin.y -= 1;
+        origin -= transform.forward;
         RaycastHit hit;
-        if (Physics.SphereCast(origin, 0.1f, transform.forward, out hit, 1, _pickupLayer))
+        if (Physics.SphereCast(origin, 1f, transform.forward, out hit, 2, _pickupLayer))
         {
             _availableToPickup = hit.transform;
             _availableToPickup.GetComponent<MaterialSwapper>().SwapMaterial(true);

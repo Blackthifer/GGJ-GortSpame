@@ -1,10 +1,17 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PuzzleHandler : MonoBehaviour
 {
-    
+    [Serializable]
+    public struct ObjectAction
+    {
+        public GameObject Object;
+        public Vector3 Movement;
+        public bool PlaySound;
+    }
     
     [SerializeField] private Transform[] puzzlePieces;
     [SerializeField] private Transform[] piecePlacements;
@@ -13,8 +20,8 @@ public class PuzzleHandler : MonoBehaviour
     private int _arraySize;
     private bool _finished;
 
-    [SerializeField] private GameObject[] toBeReplaced;
-    [SerializeField] private GameObject[] newObjects;
+    [SerializeField] private ObjectAction[] toRemove;
+    [SerializeField] private ObjectAction[] newObjects;
 
     [SerializeField] private KeyCode debugActivator;
 
@@ -74,14 +81,16 @@ public class PuzzleHandler : MonoBehaviour
 
     private void replaceObjects()
     {
-        for (int i = 0; i < toBeReplaced.Length; i++)
+        for (int i = 0; i < toRemove.Length; i++)
         {
-            toBeReplaced[i].SetActive(false);
+            ObjectAction current = toRemove[i];
+            current.Object.SetActive(false);
         }
 
         for (int i = 0; i < newObjects.Length; i++)
         {
-            newObjects[i].SetActive(true);
+            ObjectAction current = newObjects[i];
+            current.Object.SetActive(true);
         }
     }
 }
