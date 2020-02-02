@@ -10,6 +10,7 @@ public class PuzzleHandler : MonoBehaviour
     {
         public GameObject Object;
         public Vector3 Movement;
+        public float MovementDuration;
         public bool PlaySound;
     }
     
@@ -39,6 +40,7 @@ public class PuzzleHandler : MonoBehaviour
         {
             _finished = true;
             bgmManager.ActivateTrack(trackActivateNr);
+            TreeHandler.IncrementCounter(trackActivateNr - 1);
             replaceObjects();
         }
 
@@ -61,7 +63,7 @@ public class PuzzleHandler : MonoBehaviour
             if (getOut)
                 return;
             _finished = true;
-            TreeHandler.IncrementCounter();
+            TreeHandler.IncrementCounter(trackActivateNr-1);
             bgmManager.ActivateTrack(trackActivateNr);
             replaceObjects();
         }
@@ -85,13 +87,33 @@ public class PuzzleHandler : MonoBehaviour
         for (int i = 0; i < toRemove.Length; i++)
         {
             ObjectAction current = toRemove[i];
-            current.Object.SetActive(false);
+            StartCoroutine(moveObject(current, true));
+            AudioSource currentAudio = current.Object.GetComponent<AudioSource>();
+            if(current.PlaySound && currentAudio)
+                currentAudio.Play();
         }
 
         for (int i = 0; i < newObjects.Length; i++)
         {
             ObjectAction current = newObjects[i];
             current.Object.SetActive(true);
+            StartCoroutine(moveObject(current));
+            AudioSource currentAudio = current.Object.GetComponent<AudioSource>();
+            if(current.PlaySound && currentAudio)
+                currentAudio.Play();
         }
+    }
+
+    private IEnumerator moveObject(ObjectAction moveAction, bool remove = false)
+    {
+        GameObject toMove = moveAction.Object;
+        Vector3 originalPos = toMove.transform.position;
+        Vector3 finalPos = originalPos + moveAction.Movement;
+        for (float j = 0; j < moveAction.MovementDuration; j += Time.deltaTime)
+        {
+            toMove.transform.position = Vector3.Lerp(originalPos, finalPos, j / moveAction.MovementDuration);
+            yield return null;
+        }
+        moveAction.Object.SetActive(!remove);
     }
 }

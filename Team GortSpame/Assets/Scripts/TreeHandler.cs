@@ -5,7 +5,12 @@ using UnityEngine;
 public class TreeHandler : MonoBehaviour
 {
     private static int _puzzlesCompleted = 0;
+    private static int _lastPuzzleCompleted = 0;
     private static bool _updateNextFrame = false;
+    [SerializeField] private GameObject treeBase;
+    private Renderer _treeBaseRenderer;
+    private Material[] _treeBaseMats;
+    [SerializeField] private Material elementOnMat;
     [SerializeField] private GameObject stage1Tree;
     [SerializeField] private GameObject stage2Tree;
     [SerializeField] private GameObject stage3Tree;
@@ -17,7 +22,8 @@ public class TreeHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        _treeBaseRenderer = treeBase.GetComponent<Renderer>();
+        _treeBaseMats = _treeBaseRenderer.materials;
     }
 
     // Update is called once per frame
@@ -25,7 +31,9 @@ public class TreeHandler : MonoBehaviour
     {
         if (_updateNextFrame && _puzzlesCompleted <= puzzleCompleteTexts.Length)
         {
-            textWriter.WriteText(puzzleCompleteTexts[_puzzlesCompleted - 1]);
+            _treeBaseMats[_lastPuzzleCompleted] = elementOnMat;
+            _treeBaseRenderer.materials = _treeBaseMats;
+            textWriter.WriteText(puzzleCompleteTexts[_lastPuzzleCompleted - 1]);
             _updateNextFrame = false;
         }
         switch (_puzzlesCompleted)
@@ -54,9 +62,10 @@ public class TreeHandler : MonoBehaviour
         }
     }
 
-    public static void IncrementCounter()
+    public static void IncrementCounter(int puzzleCompleted)
     {
         _puzzlesCompleted += 1;
+        _lastPuzzleCompleted = puzzleCompleted;
         //Debug.Log("Puzzles completed: " + _puzzlesCompleted);
         _updateNextFrame = true;
     }
