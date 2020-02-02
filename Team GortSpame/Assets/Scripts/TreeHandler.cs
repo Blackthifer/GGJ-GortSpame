@@ -21,10 +21,10 @@ public class TreeHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_updateNextFrame)
-        {
-            switch (_puzzlesCompleted)
-            {
+         switch (_puzzlesCompleted)
+         {
+                case 0:
+                    break;
                 case 1:
                     stage1Tree.SetActive(true);
                     break;
@@ -44,10 +44,7 @@ public class TreeHandler : MonoBehaviour
                     stage4Tree.SetActive(false);
                     stage5Tree.SetActive(true);
                     break;
-            }
-
-            _updateNextFrame = false;
-        }
+         }
     }
 
     public static void IncrementCounter()
