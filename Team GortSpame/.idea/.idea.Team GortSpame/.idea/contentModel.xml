@@ -50,6 +50,7 @@
           <e p="ShowPrompt.cs" t="Include" />
           <e p="SoundTrackFadeSwitch.cs" t="Include" />
           <e p="TextTrigger.cs" t="Include" />
+          <e p="TreeHandler.cs" t="Include" />
           <e p="UITextWriter.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">
