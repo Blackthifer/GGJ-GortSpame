@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
+--- !u!1 &3134011510327039037
+=======
+--- !u!1 &4841442646635476117
+>>>>>>> cbc55da09cf427968f7f82042ce0f53e88483f27
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+<<<<<<< HEAD
+  - component: {fileID: 2100198075708581422}
+  - component: {fileID: 6953102329727851544}
+  - component: {fileID: 3693770631403626721}
+  m_Layer: 0
+  m_Name: treeMedium
+=======
+  - component: {fileID: 8460886799059027590}
+  - component: {fileID: 590003472866983088}
+  - component: {fileID: 6560781910441738313}
+  - component: {fileID: 1290233756179277355}
+  m_Layer: 0
+  m_Name: treeMedium (1)
+>>>>>>> cbc55da09cf427968f7f82042ce0f53e88483f27
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+<<<<<<< HEAD
+--- !u!4 &2100198075708581422
+=======
+--- !u!4 &8460886799059027590
+>>>>>>> cbc55da09cf427968f7f82042ce0f53e88483f27
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 3134011510327039037}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.220554, y: 8.326672e-18, z: 17.099157}
+=======
+  m_GameObject: {fileID: 4841442646635476117}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 76.23054, y: 8.326672e-18, z: 20.649424}
+>>>>>>> cbc55da09cf427968f7f82042ce0f53e88483f27
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+--- !u!33 &6953102329727851544
+=======
+--- !u!33 &590003472866983088
+>>>>>>> cbc55da09cf427968f7f82042ce0f53e88483f27
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 3134011510327039037}
+  m_Mesh: {fileID: 3924386144654068017, guid: a1e22219d4b29c84eb04caef9c9cd4dd, type: 3}
+--- !u!23 &3693770631403626721
+=======
+  m_GameObject: {fileID: 4841442646635476117}
+  m_Mesh: {fileID: 3924386144654068017, guid: a1e22219d4b29c84eb04caef9c9cd4dd, type: 3}
+--- !u!23 &6560781910441738313
+>>>>>>> cbc55da09cf427968f7f82042ce0f53e88483f27
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 3134011510327039037}
+=======
+  m_GameObject: {fileID: 4841442646635476117}
+>>>>>>> cbc55da09cf427968f7f82042ce0f53e88483f27
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 551c551db959b58408594d0f3a54e5fe, type: 2}
+  - {fileID: 2100000, guid: c83956d935de42b47859660a5ac10dea, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+<<<<<<< HEAD
+=======
+--- !u!65 &1290233756179277355
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4841442646635476117}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 113.63068, y: 326.18088, z: 105.15995}
+  m_Center: {x: -6.8588257, y: 163.09044, z: -3.4665108}
+>>>>>>> cbc55da09cf427968f7f82042ce0f53e88483f27

@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD:Team GortSpame/Assets/prefabs/treeLonely/lonelyTree.prefab
+--- !u!1 &9125224001981149686
+=======
+--- !u!1 &2837285392508916467
+>>>>>>> cbc55da09cf427968f7f82042ce0f53e88483f27:Team GortSpame/Assets/prefabs/lonely tree/lonelyTree.prefab
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+<<<<<<< HEAD:Team GortSpame/Assets/prefabs/treeLonely/lonelyTree.prefab
+  - component: {fileID: 5257978099380945893}
+  - component: {fileID: 3864952173052672467}
+  - component: {fileID: 7394797258591847722}
+=======
+  - component: {fileID: 1241667283285237984}
+  - component: {fileID: 7809329095572970198}
+  - component: {fileID: 4565741845404198447}
+  - component: {fileID: 5523957182585981889}
+>>>>>>> cbc55da09cf427968f7f82042ce0f53e88483f27:Team GortSpame/Assets/prefabs/lonely tree/lonelyTree.prefab
+  m_Layer: 0
+  m_Name: lonelyTree 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+<<<<<<< HEAD:Team GortSpame/Assets/prefabs/treeLonely/lonelyTree.prefab
+--- !u!4 &5257978099380945893
+=======
+--- !u!4 &1241667283285237984
+>>>>>>> cbc55da09cf427968f7f82042ce0f53e88483f27:Team GortSpame/Assets/prefabs/lonely tree/lonelyTree.prefab
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Team GortSpame/Assets/prefabs/treeLonely/lonelyTree.prefab
+  m_GameObject: {fileID: 9125224001981149686}
+=======
+  m_GameObject: {fileID: 2837285392508916467}
+>>>>>>> cbc55da09cf427968f7f82042ce0f53e88483f27:Team GortSpame/Assets/prefabs/lonely tree/lonelyTree.prefab
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.382602, y: -2.758904e-16, z: 5.7557626}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD:Team GortSpame/Assets/prefabs/treeLonely/lonelyTree.prefab
+--- !u!33 &3864952173052672467
+=======
+--- !u!33 &7809329095572970198
+>>>>>>> cbc55da09cf427968f7f82042ce0f53e88483f27:Team GortSpame/Assets/prefabs/lonely tree/lonelyTree.prefab
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Team GortSpame/Assets/prefabs/treeLonely/lonelyTree.prefab
+  m_GameObject: {fileID: 9125224001981149686}
+  m_Mesh: {fileID: -7329697499262529756, guid: 7ea0a2be31e575b429c743dd97158048, type: 3}
+--- !u!23 &7394797258591847722
+=======
+  m_GameObject: {fileID: 2837285392508916467}
+  m_Mesh: {fileID: -7329697499262529756, guid: 7ea0a2be31e575b429c743dd97158048, type: 3}
+--- !u!23 &4565741845404198447
+>>>>>>> cbc55da09cf427968f7f82042ce0f53e88483f27:Team GortSpame/Assets/prefabs/lonely tree/lonelyTree.prefab
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Team GortSpame/Assets/prefabs/treeLonely/lonelyTree.prefab
+  m_GameObject: {fileID: 9125224001981149686}
+=======
+  m_GameObject: {fileID: 2837285392508916467}
+>>>>>>> cbc55da09cf427968f7f82042ce0f53e88483f27:Team GortSpame/Assets/prefabs/lonely tree/lonelyTree.prefab
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: c26a624681fbc9441885ac08211fc5eb, type: 2}
+  - {fileID: 2100000, guid: 04c8d289c80688e49a431b7cc5c8d0d1, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+<<<<<<< HEAD:Team GortSpame/Assets/prefabs/treeLonely/lonelyTree.prefab
+=======
+--- !u!65 &5523957182585981889
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2837285392508916467}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 166.54086, y: 425.2868, z: 156.58087}
+  m_Center: {x: 30.706905, y: 212.6434, z: 4.4462442}
+>>>>>>> cbc55da09cf427968f7f82042ce0f53e88483f27:Team GortSpame/Assets/prefabs/lonely tree/lonelyTree.prefab
