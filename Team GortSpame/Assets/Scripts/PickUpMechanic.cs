@@ -72,7 +72,7 @@ public class PickUpMechanic : MonoBehaviour
         heldTrans.SetParent(null, true);
         Vector3 heldPos = heldTrans.position;
         RaycastHit hit;
-        Physics.Raycast(heldTrans.position, new Vector3(0, -1, 0), out hit, 100);
+        Physics.Raycast(heldTrans.position, new Vector3(0, -1, 0), out hit, 100, 0, QueryTriggerInteraction.Ignore);
         heldPos.y = hit.point.y;
         heldTrans.position = heldPos;
         _heldItem.GetComponent<Collider>().enabled = true;

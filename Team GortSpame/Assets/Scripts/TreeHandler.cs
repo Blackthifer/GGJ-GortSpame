@@ -7,6 +7,7 @@ public class TreeHandler : MonoBehaviour
     private static int _puzzlesCompleted = 0;
     private static int _lastPuzzleCompleted = 0;
     private static bool _updateNextFrame = false;
+    private Light _sunLight;
     [SerializeField] private GameObject treeBase;
     private Renderer _treeBaseRenderer;
     private Material[] _treeBaseMats;
@@ -22,6 +23,8 @@ public class TreeHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _sunLight = GameObject.FindWithTag("Sunlight").GetComponent<Light>();
+        _sunLight.intensity = 0.5f;
         _treeBaseRenderer = treeBase.GetComponent<Renderer>();
         _treeBaseMats = _treeBaseRenderer.materials;
     }
@@ -31,6 +34,7 @@ public class TreeHandler : MonoBehaviour
     {
         if (_updateNextFrame && _puzzlesCompleted <= puzzleCompleteTexts.Length)
         {
+            StartCoroutine(brightenTheSun());
             _treeBaseMats[_lastPuzzleCompleted] = elementOnMat;
             _treeBaseRenderer.materials = _treeBaseMats;
             textWriter.WriteText(puzzleCompleteTexts[_lastPuzzleCompleted - 1]);
@@ -68,5 +72,16 @@ public class TreeHandler : MonoBehaviour
         _lastPuzzleCompleted = puzzleCompleted;
         //Debug.Log("Puzzles completed: " + _puzzlesCompleted);
         _updateNextFrame = true;
+    }
+
+    private IEnumerator brightenTheSun()
+    {
+        float increase = 0;
+        while (increase < 0.1f)
+        {
+            increase += 0.001f;
+            _sunLight.intensity += 0.001f;
+            yield return null;
+        }
     }
 }
