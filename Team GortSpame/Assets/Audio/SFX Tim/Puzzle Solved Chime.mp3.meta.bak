@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Team GortSpame/Assets/Audio/SFX Tim/Puzzle Solved Chime.mp3.meta
+guid: b1161c55ad946864dbbc4e14e66ba0fa
+=======
+guid: d36c8726fc081434aa8bece26064391c
+>>>>>>> 892005d7d4ba18735414a9f0d02a9fa333a35b38:Team GortSpame/Assets/Audio/SFX Tim/RIng Puzzle Solved.mp3.meta
+AudioImporter:
+  externalObjects: {}
+  serializedVersion: 6
+  defaultSettings:
+    loadType: 0
+    sampleRateSetting: 0
+    sampleRateOverride: 44100
+    compressionFormat: 1
+    quality: 1
+    conversionMode: 0
+  platformSettingOverrides: {}
+  forceToMono: 0
+  normalize: 1
+  preloadAudioData: 1
+  loadInBackground: 0
+  ambisonic: 0
+  3D: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
