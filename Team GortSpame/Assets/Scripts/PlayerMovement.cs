@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
         }
         
         Vector3 myPos = transform.position;
-        myPos += _speed * (_sprinting ? _sprintMultiplier : 1) * moveVector;
+        myPos += _speed * (_sprinting ? _sprintMultiplier : 1) * moveVector.normalized;
         transform.position = myPos;
 
         _sprinting = false;
